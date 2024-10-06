@@ -1,0 +1,432 @@
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      color: #343a40;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      /* padding-top: 56px; */
+  }
+  
+  body.dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+  }
+  
+  
+  h1, h2 {
+      color: #576f88;
+      
+  }
+  h1 {
+      font-size: 2.5rem; /* Ajusta según sea necesario */
+  }
+  
+  h2 {
+      font-size: 2rem; /* Ajusta según sea necesario */
+  }
+  
+  .container {
+      margin-top: 0px;
+      margin-bottom: 9%;
+      flex: 1; /* Asegura que el contenedor principal ocupe el espacio disponible */
+      padding: 30px 0;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: auto;
+      grid-gap: 10px;
+  }
+  
+  
+  .container-fluid {
+      margin: 0 auto;
+      max-width: 1200px;
+      
+    }
+  
+  .hero {
+      padding-top: 10%;
+  }
+  
+  .top-section .making-real-section .services-section {
+    padding: 2rem 0; /* Add some vertical padding */
+  }
+  
+  /* navbar */
+  .csnavbar {
+    background-color: #f8f9fa; /* Light background color */
+    position: fixed; /* Fix the navbar to the top */
+    width: 100%; /* Ensure it spans the full width */
+    z-index: 1000; /* Make sure it appears above other content */
+  }
+  
+  .navbar-brand {
+    color: #576f88; /* Letter color for brand */
+  }
+  
+  .navbar-nav {
+    margin-left: auto; /* Push the nav items to the right */
+  }
+  
+  .navbar-nav .nav-link {
+    color: #576f88; /* Letter color for nav links */
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #EF6721; /* Hover color for nav links */
+  }
+  
+  .navbar-nav .nav-item {
+    margin-left: 1rem; /* Space between nav items */
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: flex-start; /* Align items to the start on small screens */
+    }
+  
+    .navbar-nav .nav-item {
+        margin-left: 0; /* Remove left margin on small screens */
+        margin-bottom: 0.5rem; /* Add bottom margin for spacing */
+    }
+  }
+  
+    .menuList ul a{
+      color: #576f88;
+      font-size: large;
+    }
+  
+  .menuList ul a:hover{
+      background-color: #EF6721;
+      color: #fff;
+  }
+  
+    
+  
+  /* Photo Section  */
+  
+  .photos-block {
+      padding: 110px 0 70px;
+      background-position: 50% 50%;
+      /* background-position: center; */
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 350px;
+      /* background: webkit-gradient(linear, left top, left bottom, from(rgba(117, 173, 186, 0.332)), to(rgba(137, 194, 207, 0.35))); */
+      background-size: cover;
+      /* background-attachment: fixed; */
+      position: relative;
+      color: #fff;
+    }
+    
+    /* .photos1{
+      background-image: url('assets/images/myptestimonial2.jpg');
+    } */
+    
+    .photos2{
+      background-image: url('assets/images/abstract1.jpg');
+    }
+    
+    .photos3{
+      background-image: url('assets/images/abstract1.jpg');
+    }
+    
+    .photos4{
+      background-image: url('assets/images/abstract1.jpg');
+    }
+    
+    
+    .photos-block:before {
+      content: '';
+      background: rgba(0, 0, 0, 0.1);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    
+    .photos-block .container-fluid {
+      position: relative;
+      z-index: 1;
+      margin: 0 auto;
+      max-width: 900px;
+    }
+    
+    /* .photos-block .subtitle {
+      color: #cccccc;
+    }
+    
+    .photos-block blockquote {
+      border: 0;
+      text-align: center;
+      margin: 0;
+      padding: 0 0 10%;
+    }
+    
+    .photos-block cite {
+      font-style: normal;
+      padding: 15px 0 0;
+      display: block;
+    }
+    
+    .photos-block cite span {
+      display: block;
+    } */
+    
+    .photos-block .name {
+      margin: 0;
+      text-transform: uppercase;
+    }
+    
+    .photos-block .name:before {
+      content: '-';
+      margin: 0 5px 0 0;
+    }
+    
+    .photos-block .designation {
+      font-size: 14px;
+    }
+    
+    .photos-block .carousel-indicators button {
+      border: 0;
+    }
+    
+    .photos-block .carousel-indicators .active {
+      background: #576f88;
+    }
+    
+    @media only screen and (max-device-width: 1366px) {
+      .photo-block {
+        background-attachment: scroll;
+      }
+    }
+  
+  
+  
+    /* about section */
+    .about-section {
+      padding: 2rem 0; /* Add some vertical padding */
+  }
+  
+  .img-fluid {
+      max-width: 100%; /* Ensure the image is responsive */
+      height: auto; /* Maintain aspect ratio */
+  }
+  
+  
+  .top-section,
+  .photos-block,
+  .making-real-section,
+  .about-section,
+  .services-section,
+  .contactUs-section,
+  .servicesShow-section,
+  .portfolio-section {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Start below */
+    transition: opacity 1.1s ease, transform 1.1s ease; /* Smooth transition */
+  }
+  
+  .reveal {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to original position */
+  }
+  
+  
+  /* Contact Us */
+  
+  .confirmationForm {
+    width: 98%; /* Make the width more flexible */
+    max-width: 800px; /* Set a max-width to limit the size on large screens */
+    padding: 2vw;
+    position: relative;
+    background-color: rgba(239, 224, 208, 0.04);
+    display: flex; /* Use flexbox for centering content */
+    flex-direction: column; /* Ensure elements stack vertically */
+    /* align-items: flex-start; Center content horizontally */
+    justify-content: center;
+    margin: 0 auto 50px; /* Center horizontally and space below */
+    box-shadow: 5px 5px 12px 3px rgba(0, 0, 0, 0.53);
+    border-radius: 3px 3px;
+    color: #576f88;
+  }
+  
+  #confirmButton {
+    background-color: #576f88;
+    margin: 10px 0 0; /* Add margin at the top and remove side margins */
+    border-radius: 3px;
+    color: #fff;
+    border: 0;
+    padding: 10px 20px; /* Add padding for better clickability */
+    cursor: pointer; /* Show a pointer cursor on hover */
+  }
+  
+  #confirmButton:hover {
+    background: #EF6721;
+    color: #fff;
+    box-shadow: inset 0 0 0 1px #EF6721;
+  }
+  
+  /* Media Query for Smaller Screens */
+  @media (max-width: 768px) {
+    .confirmationForm {
+      width: 98%;
+      padding: 2vw;
+    }
+  
+    .confirmButton {
+      width: 100%; /* Make the button full-width on small screens */
+      margin: 20px 0; /* Adjust margins for better spacing */
+    }
+  }
+  
+  /* Media Query for Extra Small Screens */
+  @media (max-width: 480px) {
+    .confirmationForm {
+      padding: 2vw;
+      margin: 0 auto 30px; /* Adjust margin for smaller screens */
+    }
+  
+    #confirmButton {
+      padding: 12px; /* Increase padding for better touch targets */
+    }
+  }
+  
+  
+  
+  /* Footer */
+  .Footer {
+    background-color: #f8f9fa; /* Color de fondo claro */
+    padding: 20px;             /* Espaciado interno */
+    border-top: 1px solid #dee2e6; /* Línea superior */
+  }
+  
+  .Footer p {
+    margin: 0;                     /* Eliminar márgenes de párrafos */
+    color: #6c757d;                /* Color de texto gris */
+  }
+  
+  
+  #footer .socials a:hover {
+    background: #EF6721;
+  }
+  
+  
+  .logo-footer img {
+    max-height: 50px;         /* Altura máxima del logo */
+    margin: 0 auto;           /* Centrar la imagen */
+    display: block;           /* Asegurarse de que el logo se centre */
+  }
+  
+  @media (max-width: 768px) {
+    .Footer {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        align-items: center;    /* Centrar contenido */
+    }
+  
+    .socials {
+        justify-content: center; /* Centrar los íconos */
+    }
+  
+    .logo-footer {
+        margin: 10px 0;        /* Espacio alrededor del logo */
+    }
+  }
+  
+  
+  /* go to top */
+  .go-top {
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    text-indent: 101%;
+    white-space: nowrap;
+    transition: all 0.3s linear;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #576f88;
+    border-radius: 20px;
+    color: #fff;
+  }
+  
+  .go-top:before {
+    width: 13px;
+    height: 13px;
+    transform: rotate(-45deg);
+    content: '';
+    border-style: solid;
+    border-color: #fff;
+    border-width: 1px 1px 0 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -3px 0 0 -6px;
+  }
+  
+  .go-top:hover {
+    background: #EF6721;
+  }
+  
+  /* socials */
+  .socials {
+    margin-bottom: 15px;
+  /* 
+    height: 100%;
+    width: 40%;
+    display: table; */
+  }
+  
+  .socials ul {
+    display: flex;             
+    padding: 0;               
+    margin: 0;                
+    list-style: none;   
+  }
+  
+  .socials li {
+    margin-right: 15px;
+  }
+  
+  .socials li:last-child {
+    margin-right: 0;          /* Eliminar margen del último ícono */
+  }
+  
+  .socials a {
+    text-decoration: none;     /* Eliminar subrayado */
+    color: #576f88;  
+    width: 35px;
+    height: 35px;
+    background: #f8f9fa;
+    color: #576f88;
+    border-radius: 50%;
+    display: block;
+    text-align: center;
+    padding: 2px;
+    transition: background 0.3s linear, color 0.3s linear;
+  }
+  
+  .socials a:hover {
+    background: #EF6721;
+    color: #fff;
+    transition: color 0.3s;
+  }
+  
+  .socials .fab {
+    line-height: 2;
+  }
+  
+  #copyright {
+    text-align: left;
+    display: inline-flex;
+    justify-content: center;
+    color: #576f88;
+  }
+  
