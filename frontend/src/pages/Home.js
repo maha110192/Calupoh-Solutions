@@ -1,5 +1,5 @@
-
 import React, { useEffect, useRef } from 'react';
+
 import { Container } from "react-bootstrap";
 import yourImage from '../assets/images/itsolutions1.png'; 
 
@@ -78,14 +78,6 @@ const Home = () => {
             <div className="col-lg-6 col-md-12">
               <img src={yourImage} alt="Our company" className="img-fluid" />
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="services-section" ref={el => sectionRefs.current[4] = el}>
-        <div className="container">
-          <div className="servicesList">
-            {/* Add service details here */}
           </div>
         </div>
       </section>

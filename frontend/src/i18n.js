@@ -54,13 +54,6 @@ i18n
             "description": "Place: Parroquia del Señor del Encino",
             "description2": "Address: Jardín, Barrio del Encino, 20240. Aguascalientes, Ags., México.",
             "locationUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d778.363643634333!2d-102.2937839218664!3d21.875182263614903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429ee796b62a955%3A0x6f40669481f287ec!2sParroquia%20del%20Se%C3%B1or%20del%20Encino!5e0!3m2!1ses-419!2sca!4v1715200189348!5m2!1ses-419!2sca"
-          },
-          "weddingReception": {
-            "title": "Wedding Reception",
-            "time": "Time: 6:30 p.m.",
-            "description": "Place: Casa de Piedra",
-            "description2": "Address: Av. Guadalupe Gonzalez #1116. Pocitos, 20329. Aguascalientes, Ags., México.",
-            "locationUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3701.667375536074!2d-102.34597572526165!3d21.908880856970157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429eed4155c9ce9%3A0xd2f568e33afcccd0!2sCasa%20de%20Piedra!5e0!3m2!1ses-419!2sca!4v1715201034384!5m2!1ses-419!2sca"
           }
         },
       },
@@ -96,13 +89,6 @@ i18n
             "description": "Lugar: Parroquia del Señor del Encino",
             "description2": "Jardín, Barrio del Encino, 20240. Aguascalientes, Ags., México.",
             "locationUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d778.363643634333!2d-102.2937839218664!3d21.875182263614903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429ee796b62a955%3A0x6f40669481f287ec!2sParroquia%20del%20Se%C3%B1or%20del%20Encino!5e0!3m2!1ses-419!2sca!4v1715200189348!5m2!1ses-419!2sca"
-          },
-          "weddingReception": {
-            "title": "Evento  ",
-            "time": "Hora: 6:30 p.m.",
-            "description": "Lugar: Casa de Piedra",
-            "description2": "Av. Guadalupe Gonzalez #1116. Pocitos, 20329. Aguascalientes, Ags., México.",
-            "locationUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3701.667375536074!2d-102.34597572526165!3d21.908880856970157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429eed4155c9ce9%3A0xd2f568e33afcccd0!2sCasa%20de%20Piedra!5e0!3m2!1ses-419!2sca!4v1715201034384!5m2!1ses-419!2sca"
           }
         }
       }

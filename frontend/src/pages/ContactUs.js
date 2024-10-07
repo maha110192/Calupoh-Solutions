@@ -2,6 +2,9 @@ import yourImage from '../assets/images/apps1.jpg';
 import React, { useRef, useEffect, useState } from 'react';
 import axios from "axios";
 import { useTranslation } from 'react-i18next';
+import { FaPaperPlane  } from 'react-icons/fa';
+import { BiSolidSend } from 'react-icons/bi';
+import { SiMinutemailer } from "react-icons/si";
 import {
   Container,
   Spinner,
@@ -126,8 +129,9 @@ const ContactUs = () => {
               <Input type="textarea" name="message" rows="5" placeholder="Your message..." value={formData.message} onChange={handleInputChange} />
               {errors.message && <div className="text-danger">{errors.message}</div>}
             </FormGroup>
-            <Button type="submit" className="btn btn-primary" id="confirmButton" disabled={loading}>
-              {loading ? <Spinner as="span" animation="border" size="sm" /> : "Confirm"}
+            <Button type="submit" className="btn btn-primary" id="confirmButton" disabled={loading}> 
+              {loading ? <Spinner as="span" animation="border" size="sm" /> : "Send "}
+              <BiSolidSend />
             </Button>
           </Form>
         </Container>
