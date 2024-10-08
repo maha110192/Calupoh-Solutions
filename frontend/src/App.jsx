@@ -9,7 +9,7 @@ import Portfolio from './pages/Portfolio';
 import ContactUs from './pages/ContactUs';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import NoPage from './pages/NoPage';
+// import NoPage from './pages/NoPage';
 
 
 
