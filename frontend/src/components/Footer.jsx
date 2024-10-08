@@ -49,7 +49,7 @@ export default function Footer() {
                 </div>
                 <div className="col-lg-4 col-md-12 text-center">
                     <div className='logo-footer'>
-                        <img src={yourImage} alt="Our company" className="img-fluid" style={{ maxHeight: '50px' }} />
+                        <img src={yourImage} alt="Our company" className="img-fluid logoFooter"  />
                     </div>
                 </div>
                 <div className="col-lg-4 col-md-12 text-right">

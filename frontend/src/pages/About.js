@@ -33,14 +33,16 @@ const About = () => {
     <>
     <section className="about-section" ref={el => sectionRefs.current[3] = el}>
         <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-6 col-md-12">
-              <h2 className="reveal-text">About Us</h2>
-              <p className="reveal-text">Somos un equipo dedicado a ofrecer soluciones digitales de alta calidad.</p>
-              <p className="reveal-text">Nuestra misión es transformar tu negocio a través de la tecnología.</p>
-            </div>
-            <div className="col-lg-6 col-md-12">
-              <img src={yourImage} alt="Our company" className="img-fluid" />
+          <div className="hero">
+            <div className="row align-items-center">
+              <div className="col-lg-6 col-md-12">
+                <h2 className="reveal-text">About Us</h2>
+                <p className="reveal-text">Somos un equipo dedicado a ofrecer soluciones digitales de alta calidad.</p>
+                <p className="reveal-text">Nuestra misión es transformar tu negocio a través de la tecnología.</p>
+              </div>
+              <div className="col-lg-6 col-md-12">
+                <img src={yourImage} alt="Our company" className="img-fluid" />
+              </div>
             </div>
           </div>
         </div>
