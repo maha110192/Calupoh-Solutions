@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-// import { Container } from "react-bootstrap";
-// import yourImage from '../assets/images/apps1.jpg'; 
+import { Link } from 'react-router-dom';
 
 const Services = () => {
   const sectionRefs = useRef([]);
@@ -10,12 +9,12 @@ const Services = () => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('reveal');
-          observer.unobserve(entry.target); // Stop observing after revealing
+          observer.unobserve(entry.target); // Detener la observación después de revelar
         }
       });
     });
 
-    // Copy refs to a variable for cleanup
+    // Copiar refs a una variable para limpieza
     const currentRefs = sectionRefs.current;
 
     currentRefs.forEach(ref => {
@@ -29,52 +28,37 @@ const Services = () => {
     };
   }, []);
 
+  const services = [
+    { title: "Desarrollo Web", description: "Creamos sitios web adaptativos y de alto rendimiento.", slug: "desarrollo-web" },
+    { title: "Invitaciones Digitales", description: "Diseñamos invitaciones creativas para cualquier ocasión.", slug: "invitaciones" },
+    { title: "E-commerce", description: "Desarrollamos tiendas en línea seguras y efectivas.", slug: "e-commerce" },
+    { title: "Software a medida", description: "Creamos soluciones de software personalizadas para tu negocio.", slug: "software-a-medida" },
+    { title: "Diseño Digital", description: "Diseños gráficos que destacan y comunican tu mensaje.", slug: "diseno-digital" },
+    { title: "Soporte y Reparación", description: "Asistencia técnica y mantenimiento para tus sistemas.", slug: "soporte-reparacion" }
+  ];
+
   return (
-    <>
-      <section className="top-section" ref={el => sectionRefs.current[0] = el}>
-        <div className="container">
-          <div className="hero">
-            <h1>Calupoh Solutions</h1>
-            <p>You Imagine We code</p>
-            <div className="color-div">
-              <h3>Nuestras Soluciones</h3>
-              <p>Ofrecemos servicios de desarrollo web, marketing digital y más.</p>
-            </div>
-          </div>
-        </div>
-      </section>
     <section className="servicesShow-section" ref={el => sectionRefs.current[1] = el}>
-      <div className="container">
-        <h2>Nuestros Servicios</h2>
-        <div className="row">
-          <div className="col-md-4">
-            <div className="card">
-              <div className="card-body">
-                <h5 className="card-title">Desarrollo Web</h5>
-                <p className="card-text">Creamos sitios web adaptativos y de alto rendimiento.</p>
+      <div className="container ">
+        <div className="hero">
+          <h2>Nuestros Servicios</h2>
+          <div className="row servicesHero">
+            {services.map((service, index) => (
+              <div className="col-md-4 " key={index}>
+                <div className="card service-card">
+                  <div className="card-body">
+                    <Link to={`/services/${service.slug}`} className="service-link">
+                      <h5 className="card-title">{service.title}</h5>
+                      <p className="card-text">{service.description}</p>
+                    </Link>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div className="col-md-4">
-            <div className="card">
-              <div className="card-body">
-                <h5 className="card-title">Consultoría de TI</h5>
-                <p className="card-text">Asesoramos a empresas en sus estrategias digitales.</p>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-4">
-            <div className="card">
-              <div className="card-body">
-                <h5 className="card-title">Marketing Digital</h5>
-                <p className="card-text">Ayudamos a aumentar tu presencia en línea.</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
     </section>
-    </>
   );
 };
 

@@ -95,7 +95,7 @@ const ContactUs = () => {
                 <p className="reveal-text">Nuestra misión es transformar tu negocio a través de la tecnología.</p>
               </div>
               <div className="col-lg-6 col-md-12">
-                <img src={yourImage} alt="Our company" className="img-fluid" />
+                <img src={yourImage} alt="Our company" className="img-fluid about-img" />
               </div>
             </div>
           </div>

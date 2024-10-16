@@ -9,25 +9,37 @@ import Portfolio from './pages/Portfolio';
 import ContactUs from './pages/ContactUs';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-// import NoPage from './pages/NoPage';
-
-
+import Websites from './pages/services/Websites';
+import Invitaciones from './pages/services/Invitaciones';
+import Ecommerce from './pages/services/Ecommerce';
+import Software from './pages/services/Software';
+import Diseno from './pages/services/Diseno';
+import Soporte from './pages/services/Soporte';
+import NoPage from './pages/NoPage';
+import ContactBanner from './components/Contact-Banner';
 
 const App = () => {
   return (
     <Router>
       <div>
         <Navbar />
-          <Routes>
-            <Route index element={<Home />}/>
-            <Route path="/home" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/contact-us" element={<ContactUs />} />
-            {/* <Route path='*' element={<NoPage />} /> */}
-          </Routes>
-        <Footer/>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/services/websites" element={<Websites />} />
+          <Route path="/services/invitaciones" element={<Invitaciones />} />
+          <Route path="/services/ecommerce" element={<Ecommerce />} />
+          <Route path="/services/software" element={<Software />} />
+          <Route path="/services/diseno" element={<Diseno />} />
+          <Route path="/services/soporte" element={<Soporte />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/contact-us" element={<ContactUs />} />
+          <Route path='*' element={<NoPage />} />
+        </Routes>
+        <ContactBanner/>
+        <Footer />
       </div>
     </Router>
   );

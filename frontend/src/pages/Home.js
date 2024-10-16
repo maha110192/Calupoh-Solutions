@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-
 import { Container } from "react-bootstrap";
 import yourImage from '../assets/images/itsolutions1.png'; 
 
@@ -11,12 +10,12 @@ const Home = () => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('reveal');
-          observer.unobserve(entry.target); // Stop observing after revealing
+          observer.unobserve(entry.target); // Detener observación después de revelar
         }
       });
     });
 
-    // Copy refs to a variable for cleanup
+    // Copiar refs a una variable para limpieza
     const currentRefs = sectionRefs.current;
 
     currentRefs.forEach(ref => {
@@ -32,7 +31,7 @@ const Home = () => {
 
   return (
     <>
-      <section className="top-section" ref={el => sectionRefs.current[0] = el}>
+      <section id="home" className="top-section" ref={el => sectionRefs.current[0] = el}>
         <div className="container">
           <div className="hero">
             <h1>Calupoh Solutions</h1>
@@ -76,7 +75,7 @@ const Home = () => {
               <p className="reveal-text">Nuestra misión es transformar tu negocio a través de la tecnología.</p>
             </div>
             <div className="col-lg-6 col-md-12">
-              <img src={yourImage} alt="Our company" className="img-fluid" />
+              <img src={yourImage} alt="Our company" className="img-fluid about-img" />
             </div>
           </div>
         </div>
