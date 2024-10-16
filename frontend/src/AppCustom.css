@@ -324,7 +324,7 @@ h2 {
 
 .service-card:hover {
   transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra más intensa al hacer hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra más intensa al hacer hover */
 }
 
 .card-title {
@@ -348,7 +348,7 @@ h2 {
 }
 
 .service-link:hover {
-  background-color: rgba(0, 0, 0, 0.02); /* Color de fondo al hacer hover */
+  background-color: rgba(0, 0, 0, 0.01); /* Color de fondo al hacer hover */
 }
 
 /* Media Queries para servicios */

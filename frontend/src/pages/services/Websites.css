@@ -1,0 +1,214 @@
+/* Websites.css */
+
+.hero-section {
+    background: url('../../assets/images//PaoyMiguel-61.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 100px 0;
+    position: relative;
+  }
+  
+  .hero-section h1,
+  .hero-section p,
+  .hero-section button {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  
+  .hero-section h1.animated.fadeIn,
+  .hero-section p.animated.fadeIn,
+  .hero-section button.animated.fadeIn {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .servicesShow-section .service-card {
+    border: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .servicesShow-section .service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+
+  .service-card, .feature-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Asegura que el contenido ocupe el espacio disponible */
+    height: 100%; /* Asegura que todas las tarjetas tengan la misma altura */
+  }
+  
+  .service-card img, .feature-icon {
+    flex-shrink: 0; /* Evita que la imagen se reduzca */
+    max-height: 150px; /* Controla la altura de las imágenes para mantener uniformidad */
+    object-fit: cover; /* Asegura que la imagen mantenga su proporción */
+  }
+  
+  .feature-card {
+    min-height: 200px; /* Establece una altura mínima para las tarjetas de características */
+  }
+
+  .testimonials-section .carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+  }
+  
+  .steps-list {
+    list-style-type: decimal;
+    padding-left: 20px;
+  }
+  
+  .steps-list li {
+    margin-bottom: 10px;
+  }
+  
+  .plans-section .plan-card {
+    /* border: 2px solid #007bff; */
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .plans-section .plan-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px var(--other-option-bckgnd);
+  }
+  
+  .card-price {
+    font-size: 1.5em;
+    color: var(--primary-color);
+  }
+
+  .planBtn{
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    margin: 10px 0 0; /* Margen superior */
+    border-radius: 5px;
+    color: #fff;
+    border: 0;
+    padding: 10px 20px; /* Padding */
+    cursor: pointer; /* Cursor de puntero */
+    transition: background 0.3s ease, transform 0.3s ease; /* Transiciones */
+  }
+
+  .planBtn:hover{
+    background: var(--secondary-color);
+    border-color:  var(--secondary-color);
+    color: #fff;
+    box-shadow: inset 0 0 0 1px var(--secondary-color);
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .hero-section {
+      padding: 50px 0;
+    }
+  
+    .servicesShow-section .service-card {
+      margin-bottom: 20px;
+    }
+  
+    .plans-section .plan-card {
+      margin-bottom: 20px;
+    }
+  }
+
+  /* Sección de características */
+.features-section {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+  }
+  
+  .feature-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .feature-icon {
+    font-size: 40px;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+  }
+  
+  /* Sección de testimonios */
+  .testimonials-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+  }
+  
+  .carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+  }
+
+  .carousel-item {
+    text-align: center; /* Centra el texto */
+  }
+  
+  /* Sección de pasos */
+  .steps-section {
+    padding: 60px 0;
+  }
+  
+  .steps-container {
+    background: #f1f1f1;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .steps-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .steps-list li {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  
+  .steps-list li .step-number {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .features-section {
+      padding: 40px 0;
+    }
+  
+    .testimonials-section {
+      padding: 40px 0;
+    }
+  
+    .steps-section {
+      padding: 40px 0;
+    }
+  }
+  
