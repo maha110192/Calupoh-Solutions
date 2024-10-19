@@ -1,7 +1,7 @@
 /* Websites.css */
 
 .hero-section {
-    background: url('../../assets/images//PaoyMiguel-61.jpg') no-repeat center center;
+    background: url('../../assets/images/abstract1.jpg') no-repeat center center;
     background-size: cover;
     color: white;
     padding: 100px 0;
@@ -143,60 +143,148 @@
     margin-bottom: 15px;
   }
   
-  /* Sección de testimonios */
-  .testimonials-section {
-    padding: 60px 0;
-    background-color: #f8f9fa;
-  }
   
-  .carousel-caption {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-    transition: transform 0.5s ease;
-  }
-
-  .carousel-item {
-    text-align: center; /* Centra el texto */
-  }
   
   /* Sección de pasos */
   .steps-section {
-    padding: 60px 0;
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   }
   
   .steps-container {
-    background: #f1f1f1;
-    border-radius: 10px;
-    padding: 20px;
-  }
-  
-  .steps-list {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .steps-list li {
-    position: relative;
-    padding-left: 40px;
-    margin-bottom: 10px;
-    font-weight: 500;
-  }
-  
-  .steps-list li .step-number {
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-color: #007bff;
-    color: white;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 30px;
   }
   
+  .step-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .step-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  }
+  
+  .step-icon {
+    font-size: 40px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+  }
+  
+  .step-number {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+  }
+  
+  .step-content p {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Mejoras generales */
+  .hero-section {
+    background-attachment: fixed;
+    position: relative;
+  }
+  
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .websiteContainer h1{
+    color:var(--primary-color);
+
+  }
+  
+  .hero-section .container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .servicesShow-section,
+  .features-section,
+  .testimonials-section,
+  .plans-section {
+    padding: 80px 0;
+  }
+  
+  .servicesShow-section {
+    background: #f9f9f9;
+  }
+  
+  .features-section {
+    background: linear-gradient(45deg, #f3f3f3 0%, #ffffff 100%);
+  }
+  
+  .testimonials-section {
+    background: url('../../assets/images/image\ \(1\).png') no-repeat center center;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .testimonials-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+  }
+  
+  .testimonials-section .container {
+    position: relative;
+    z-index: 1;
+    color: var(--primary-color);
+  }
+  .testimonials-section h2 {
+    color: white;
+  }
+  
+  .plans-section {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  }
+  
+  /* Animaciones adicionales */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .reveal {
+    animation: fadeInUp 0.6s ease-out;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .step-card {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+
   /* Responsiveness */
   @media (max-width: 768px) {
     .features-section {

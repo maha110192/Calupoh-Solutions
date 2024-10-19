@@ -155,7 +155,7 @@ const Navbar = () => {
               </button>
               <ServicesDropdown />
             </li>
-            <NavItem href="/portfolio">Portfolio</NavItem>
+            {/* <NavItem href="/portfolio">Portfolio</NavItem> */}
             <NavItem href="/contact-us">Contact Us</NavItem>
           </ul>
         </div>
@@ -176,7 +176,7 @@ const Navbar = () => {
             </button>
             {isServicesOpen && <ServicesDropdown />}
           </li>
-          <NavItem href="/portfolio">Portfolio</NavItem>
+          {/* <NavItem href="/portfolio">Portfolio</NavItem> */}
           <NavItem href="/contact-us">Contact Us</NavItem>
         </ul>
       </div>

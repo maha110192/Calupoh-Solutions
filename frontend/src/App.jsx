@@ -16,7 +16,7 @@ import Software from './pages/services/Software';
 import Diseno from './pages/services/Diseno';
 import Soporte from './pages/services/Soporte';
 import NoPage from './pages/NoPage';
-import ContactBanner from './components/Contact-Banner';
+// import ContactBanner from './components/Contact-Banner';
 
 const App = () => {
   return (
@@ -34,11 +34,11 @@ const App = () => {
           <Route path="/services/software" element={<Software />} />
           <Route path="/services/diseno" element={<Diseno />} />
           <Route path="/services/soporte" element={<Soporte />} />
-          <Route path="/portfolio" element={<Portfolio />} />
+          {/* <Route path="/portfolio" element={<Portfolio />} /> */}
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path='*' element={<NoPage />} />
         </Routes>
-        <ContactBanner/>
+        {/* <ContactBanner/> */}
         <Footer />
       </div>
     </Router>

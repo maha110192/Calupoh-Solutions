@@ -39,7 +39,7 @@ export default function Footer() {
                 <div className="col-12 col-md-4  mb-3">
                     <div className="socials">
                         <ul>
-                            <li><a href='https://www.linkedin.com/in/miguel-ahumada-803a87116/' target='_blank' rel="noreferrer"><i className="fab fa-linkedin-in"></i></a></li>
+                            {/* <li><a href='https://www.linkedin.com/in/miguel-ahumada-803a87116/' target='_blank' rel="noreferrer"><i className="fab fa-linkedin-in"></i></a></li> */}
                             <li><a href='https://www.linkedin.com/in/miguel-ahumada-803a87116/' target='_blank' rel="noreferrer"><i className="fab fa-instagram"></i></a></li>
                             <li><a href='https://www.linkedin.com/in/miguel-ahumada-803a87116/' target='_blank' rel="noreferrer"><i className="fab fa-facebook"></i></a></li>
                             <li><a href={whatsappURL} target="_blank" rel="noreferrer"><i className="fab fa-whatsapp"></i></a></li>
